@@ -3,13 +3,18 @@ kind: PostgresCluster
 metadata:
   name: hippo
 spec:
+  service: 
+    type: NodePort
+    nodePort: 30001
   postgresVersion: 17
   users:
+    - name: postgres
     - name: rhino
       databases:
         - zoo
   instances:
     - name: instance1
+      replicas: 2
       dataVolumeClaimSpec:
         accessModes:
         - "ReadWriteOnce"
