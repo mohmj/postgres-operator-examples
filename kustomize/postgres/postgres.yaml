@@ -3,7 +3,7 @@ kind: PostgresCluster
 metadata:
   name: hippo
 spec:
-  service: 
+  service:
     type: NodePort
     nodePort: 30001
   postgresVersion: 17
