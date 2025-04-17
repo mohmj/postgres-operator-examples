@@ -1,6 +1,6 @@
 kind: Kustomization
 
-namespace: postgres-operator
+namespace: par-project-postgres-operator
 
 labels:
 - includeSelectors: false
