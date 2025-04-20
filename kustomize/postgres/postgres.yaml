@@ -1,11 +1,11 @@
 apiVersion: postgres-operator.crunchydata.com/v1beta1
 kind: PostgresCluster
 metadata:
-  name: hippo
+  name: par-project
 spec:
   service:
-    type: NodePort
-    nodePort: 30001
+    type: LoadBalancer
+    # nodePort: 30001
   postgresVersion: 15
   users:
     - name: postgres
